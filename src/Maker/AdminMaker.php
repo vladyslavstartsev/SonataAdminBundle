@@ -38,7 +38,7 @@ final class AdminMaker extends AbstractMaker
      */
     private $projectDirectory;
     /**
-     * @var string[]
+     * @var array<string, ModelManagerInterface|null>
      */
     private $availableModelManagers;
     /**
@@ -70,6 +70,10 @@ final class AdminMaker extends AbstractMaker
      */
     private $modelManager;
 
+    /**
+     * @param string                               $projectDirectory
+     * @param array<string, ModelManagerInterface> $modelManagers
+     */
     public function __construct($projectDirectory, array $modelManagers = [])
     {
         $this->projectDirectory = $projectDirectory;
